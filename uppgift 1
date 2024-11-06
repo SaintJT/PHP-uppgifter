@@ -1,0 +1,75 @@
+    
+ <!DOCTYPE html>
+ <html>
+ <head>
+     <title>Länder och städer i baltikum och lärare</title>
+     <style>
+         table {
+             width: 50%;
+             border-collapse: collapse;
+             width: 320px;
+             
+         }
+         table, th, td {
+             border: 1px solid black;
+             color: #CBC3E3;
+         }
+         th, td {
+             padding: 8px;
+             text-align: left;
+         }
+     </style>
+ </head>
+ <body>
+ 
+ <?php
+ $huvudstader = array(
+     "Sverige" => "Stockholm",
+     "Finland" => "Helsingfors",
+     "Danmark" => "Köpenhamn",
+     "Norge" => "Oslo",
+     "Island" => "Reykjavik",
+     "Estland" => "Tallinn",
+     "Lettland" => "Riga",
+     "Litauen" => "Vilnius"
+ );
+ 
+ foreach($huvudstader as $land => $huvudstad) {
+     echo "$land's huvudstad heter $huvudstad.<br>";
+ }
+ 
+ echo "<h2>Länder och Huvudstäder</h2>";
+
+ echo "<table>";
+ echo "<tr><th>Land</th><th>Huvudstad</th></tr>";
+ 
+ foreach($huvudstader as $land => $huvudstad) {
+     echo "<tr><td>$land</td><td>$huvudstad</td></tr>";
+ }
+ 
+ echo "</table>";
+ 
+ $kurser = array(
+     "Webbserverprogrammering" => "Holger",
+     "Matematik" => "Mari",
+     "Fysik" => "Mari",
+     "Engelska" => "Carolina",
+ );
+ 
+ echo "<br><br>";
+ 
+ echo "<h2>Kurser och Lärare</h2>";
+ 
+ echo "<table>";
+ echo "<tr><th>Kurs</th><th>Lärare</th></tr>";
+ 
+ foreach($kurser as $kurs => $larare) {
+     echo "<tr><td>$kurs</td><td>$larare</td></tr>";
+ }
+ 
+ echo "</table>";
+ ?>
+ 
+ </body>
+ </html>
+?>
